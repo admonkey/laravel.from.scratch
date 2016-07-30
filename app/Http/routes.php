@@ -11,23 +11,6 @@
 |
 */
 
-// Route::get('/', 'PagesController@home');
-
-Route::get('/', function () {
-//   return 'Hi there';
-//   return view('welcome');
-
-  $people = ['Taylor','Matt','Jeffrey'];
-//   $people = [];
-
-  // 4 ways to include array in view
-//   return view('welcome', ['people'=>$people]);
-//   return view('welcome', compact('people'));
-//   return view('welcome')->with('people',$people);
-  return view('welcome')->withPeople($people);
-
-});
-
 // Route::get('/about', function () { // slash implied
 Route::get('about', function () {
   return 'The About Page';
@@ -38,3 +21,20 @@ Route::get('about', function () {
   return view('pages.about');
   // resources/views/pages/about.blade.php
 });
+// Route::get('/', function () {
+// //   return 'Hi there';
+// //   return view('welcome');
+// 
+//   $people = ['Taylor','Matt','Jeffrey'];
+// //   $people = [];
+// 
+//   // 4 ways to include array in view
+// //   return view('welcome', ['people'=>$people]);
+// //   return view('welcome', compact('people'));
+// //   return view('welcome')->with('people',$people);
+//   return view('welcome')->withPeople($people);
+// 
+// });
+
+Route::get('/', 'PagesController@home');
+
