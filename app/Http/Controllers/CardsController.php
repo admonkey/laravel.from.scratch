@@ -14,7 +14,8 @@ class CardsController extends Controller
   */
   public function index(){
 
-    return view('cards.index');
+    $cards = \DB::table('cards')->get();
+    return view('cards.index',compact('cards'));
 
   }
 
