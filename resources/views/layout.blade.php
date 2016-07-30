@@ -3,8 +3,7 @@
     <head>
         <title>Laravel</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="stylesheet" href="/css/app.css">
+        <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
         @yield('header')
     </head>
     <body>
