@@ -14,8 +14,17 @@
 // Route::get('/', 'PagesController@home');
 
 Route::get('/', function () {
-//     return view('welcome');
-  return 'Hi there';
+//   return 'Hi there';
+//   return view('welcome');
+
+  $people = ['Taylor','Matt','Jeffrey'];
+
+  // 4 ways to include array in view
+//   return view('welcome', ['people'=>$people]);
+//   return view('welcome', compact('people'));
+//   return view('welcome')->with('people',$people);
+  return view('welcome')->withPeople($people);
+
 });
 
 // Route::get('/about', function () { // slash implied
