@@ -11,16 +11,6 @@
 |
 */
 
-// Route::get('/about', function () { // slash implied
-Route::get('about', function () {
-  return 'The About Page';
-});
-
-Route::get('about', function () {
-//   return view('pages/about');
-  return view('pages.about');
-  // resources/views/pages/about.blade.php
-});
 // Route::get('/', function () {
 // //   return 'Hi there';
 // //   return view('welcome');
@@ -38,3 +28,15 @@ Route::get('about', function () {
 
 Route::get('/', 'PagesController@home');
 
+// // Route::get('/about', function () { // slash implied
+// Route::get('about', function () {
+//   return 'The About Page';
+// });
+
+// Route::get('about', function () {
+// //   return view('pages/about');
+//   return view('pages.about');
+//   // resources/views/pages/about.blade.php
+// });
+
+Route::get('about', 'PagesController@about');

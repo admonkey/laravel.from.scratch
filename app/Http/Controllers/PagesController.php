@@ -18,4 +18,14 @@ class PagesController extends Controller
 
     return view('welcome', compact('people'));
   }
+
+  /**
+  * About Page
+  *
+  */
+  public function about()
+  {
+    return view('pages.about');
+  }
+
 }
