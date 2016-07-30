@@ -18,6 +18,13 @@ Route::get('/', function () {
   return 'Hi there';
 });
 
-Route::get('/about', function () {
+// Route::get('/about', function () { // slash implied
+Route::get('about', function () {
   return 'The About Page';
+});
+
+Route::get('about', function () {
+//   return view('pages/about');
+  return view('pages.about');
+  // resources/views/pages/about.blade.php
 });
