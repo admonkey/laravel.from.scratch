@@ -44,6 +44,12 @@
         </div>
     -->
 
+    @if (empty($people))
+      There are no people.
+    @else
+      Something else here.
+    @endif
+
     @foreach ($people as $person)
       <li>{{ $person }}</li>
     @endforeach

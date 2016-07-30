@@ -18,6 +18,7 @@ Route::get('/', function () {
 //   return view('welcome');
 
   $people = ['Taylor','Matt','Jeffrey'];
+//   $people = [];
 
   // 4 ways to include array in view
 //   return view('welcome', ['people'=>$people]);
