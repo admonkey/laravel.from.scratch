@@ -21,4 +21,10 @@ class CardsController extends Controller
 
   }
 
+  public function show($card){
+
+    return $card;
+
+  }
+
 }
