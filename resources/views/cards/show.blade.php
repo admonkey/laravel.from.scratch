@@ -1,5 +1,9 @@
 @extends('layout')
 
+@section('header')
+  <meta name="csrf-token" content="{{ csrf_token() }}" />
+@show
+
 @section('content')
 
   <div class="row">
@@ -16,6 +20,9 @@
       <h3>Add a New Note</h3>
 
       <form method="POST" action="/cards/{{ $card->id }}/notes">
+
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
         <div class="form-group">
           <textarea name="body" class="form-control"></textarea>
         </div>
