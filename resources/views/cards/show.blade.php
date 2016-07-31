@@ -11,9 +11,12 @@
 
       <h1>{{ $card->title }}</h1>
 
-      <ul class="list-group">
+      <ul class="list-group list-card-notes">
         @foreach ($card->notes as $note)
-          <li class="list-group-item">{{ $note->body }}</li>
+          <li class="list-group-item">
+            {{ $note->body }}
+            <a href="/notes/{{ $note->id }}/edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+          </li>
         @endforeach
       </ul>
 
