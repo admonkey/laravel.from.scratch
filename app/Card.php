@@ -15,4 +15,9 @@ class Card extends Model
   {
     return '/cards/'.$this->id;
   }
+
+  public function addNote(Note $note)
+  {
+    return $this->notes()->save($note);
+  }
 }
