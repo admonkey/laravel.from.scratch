@@ -46,4 +46,11 @@ class NotesController extends Controller
 
   }
 
+  public function update(Request $request, Note $note){
+
+    $note->update($request->all());
+
+    return back();
+  }
+
 }
