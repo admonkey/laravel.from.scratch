@@ -21,8 +21,9 @@ class CardsController extends Controller
 
   }
 
-  public function show($card){
+  public function show($id){
 
+    $card = Card::find($id);
     return $card;
 
   }
