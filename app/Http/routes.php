@@ -46,3 +46,5 @@ Route::get('cards', 'CardsController@index');
 // Route::post('cards', 'CardsController@store');
 
 Route::get('cards/{card}', 'CardsController@show');
+
+Route::post('cards/{card}/notes', 'NotesController@store');
