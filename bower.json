@@ -1,0 +1,21 @@
+{
+  "name": "laravel.from.scratch",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Jeff Puckett <jeff@jeffpuckett.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/admonkey/laravel.from.scratch",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.6.3"
+  }
+}

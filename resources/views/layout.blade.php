@@ -14,6 +14,8 @@
 
         <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
 
+        <link rel="stylesheet" href="/bower/font-awesome/css/font-awesome.min.css">
+
         @yield('header')
 
     </head>
