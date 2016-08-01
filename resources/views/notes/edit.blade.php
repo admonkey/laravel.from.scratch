@@ -15,10 +15,10 @@
 
         {{ method_field('PATCH') }}
 
-        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        {{ csrf_field() }}
 
         <div class="form-group">
-          <textarea name="body" class="form-control">{{ $note->body }}</textarea>
+          <textarea name="body" class="form-control" required>{{ $note->body }}</textarea>
         </div>
 
         <div class="form-group">
