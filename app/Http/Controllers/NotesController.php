@@ -33,9 +33,14 @@ class NotesController extends Controller
 
 //     $card->notes()->create($request->all());
 
-    $card->addNote(
-      new Note($request->all())
-    );
+//     $card->addNote(
+//       new Note($request->all())
+//     );
+
+    $note = new Note($request->all());
+    $note->user_id = 1;
+
+    $card->addNote($note);
 
     return back();
   }

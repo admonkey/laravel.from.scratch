@@ -30,8 +30,6 @@
 
       <form method="POST" action="/cards/{{ $card->id }}/notes">
 
-        <input type="hidden" name="user_id" value="1">
-
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
         <div class="form-group">
