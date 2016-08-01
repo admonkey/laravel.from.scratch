@@ -43,6 +43,7 @@
 
             <ul class="nav navbar-nav">
               <li><a href="/cards">Cards</a></li>
+              @yield('nav-item')
             </ul>
 
             <ul class="nav navbar-nav navbar-right">

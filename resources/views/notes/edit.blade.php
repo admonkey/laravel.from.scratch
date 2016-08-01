@@ -1,5 +1,9 @@
 @extends('layout')
 
+@section('nav-item')
+  <li><a href="/cards/{{ $note->card_id }}">Notes</a></li>
+@stop
+
 @section('content')
 
   <div class="row">
@@ -19,6 +23,7 @@
 
         <div class="form-group">
           <button type="submit" class="btn btn-primary">Update Note</button>
+          <a href="/cards/{{ $note->card_id }}" class="btn btn-danger">Cancel</a>
         </div>
       </form>
 
