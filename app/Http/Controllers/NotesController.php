@@ -38,9 +38,8 @@ class NotesController extends Controller
 //     );
 
     $note = new Note($request->all());
-    $note->user_id = 1;
 
-    $card->addNote($note);
+    $card->addNote($note, 1);
 
     return back();
   }
