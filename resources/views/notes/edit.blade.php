@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('nav-item')
   <li><a href="/cards/{{ $note->card_id }}">Notes</a></li>
