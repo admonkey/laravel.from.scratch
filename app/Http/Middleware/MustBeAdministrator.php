@@ -19,6 +19,6 @@ class MustBeAdministrator
         if($user && $user->name === 'JohnAdministratorDoe'){
           return $next($request);
         }
-        abort(404, 'No way.');
+        abort(403, 'No way.');
     }
 }
