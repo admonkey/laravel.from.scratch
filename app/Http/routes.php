@@ -32,8 +32,16 @@ Route::get('/', function () {
 
     $people = ['Taylor','Matt','Jeffrey'];
 
-    Session::flash('status', 'Hello There!');
     return view('welcome')->withPeople($people);
+
+});
+
+Route::get('begin', function () {
+
+    $people = ['Taylor','Matt','Jeffrey'];
+
+    Session::flash('status', 'Hello There!');
+    return redirect('/');
 
 });
 
