@@ -82,6 +82,13 @@
 
 					<li><a href="/about">About</a></li>
 
+                                        @if (Session::has('foo'))
+                                          <li>
+                                            <a href="/begin">{{ Session::get('foo') }}</a>
+                                          </li>
+                                        @endif
+					
+
                 </ul>
             </div>
         </div>

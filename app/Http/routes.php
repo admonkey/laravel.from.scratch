@@ -40,8 +40,14 @@ Route::get('begin', function () {
 
     $people = ['Taylor','Matt','Jeffrey'];
 
+    session(['foo'=>'bar']);
+    Session::put('foo', 'bar');
+
     Session::flash('status', 'Hello There!');
-    return redirect('/');
+    session()->flash('status', 'Here is my status.');
+
+//     return redirect('/');
+    return Redirect::to('/');
 
 });
 
