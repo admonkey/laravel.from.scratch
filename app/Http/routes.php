@@ -26,7 +26,16 @@
 // 
 // });
 
-Route::get('/', 'PagesController@home');
+// Route::get('/', 'PagesController@home');
+
+Route::get('/', function () {
+
+    $people = ['Taylor','Matt','Jeffrey'];
+
+    Session::flash('status', 'Hello There!');
+    return view('welcome')->withPeople($people);
+
+});
 
 // // Route::get('/about', function () { // slash implied
 // Route::get('about', function () {

@@ -2,6 +2,10 @@
 
 @section('content')
 
+    @if (Session::has('status'))
+      <h3>{{ Session::get('status') }}</h3>
+    @endif
+
     <h1>Welcome Page</h1>
 
     <p class="lead">
