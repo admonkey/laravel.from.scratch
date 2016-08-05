@@ -38,14 +38,7 @@ Route::get('/', function () {
 
 Route::get('begin', function () {
 
-    $people = ['Taylor','Matt','Jeffrey'];
-
-    session(['foo'=>'bar']);
-    Session::put('foo', 'bar');
-
-    Session::flash('status', 'Hello There!');
-    session()->flash('flash_message', 'You\'re logged in now.');
-    session()->flash('flash_message_level', 'success');
+    flash('You\'re barred.','danger');
 
 //     return redirect('/');
     return Redirect::to('/');
