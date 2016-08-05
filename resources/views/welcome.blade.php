@@ -2,8 +2,6 @@
 
 @section('content')
 
-    @include('flash')
-
     <h1>Welcome Page</h1>
 
     <p class="lead">

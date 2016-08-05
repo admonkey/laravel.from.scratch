@@ -95,6 +95,8 @@
     </nav>
 
     <div class="container">
+      @include('flash')
+      @include('foo')
       @yield('content')
     </div>
 

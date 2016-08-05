@@ -45,6 +45,17 @@ Route::get('begin', function () {
 
 });
 
+Route::get('foo', function () {
+
+    if (session()->has('bar'))
+      session()->forget('bar');
+    else session(['bar'=>'foo']);
+
+//     return redirect('/');
+    return Redirect::to('/');
+
+});
+
 // // Route::get('/about', function () { // slash implied
 // Route::get('about', function () {
 //   return 'The About Page';
