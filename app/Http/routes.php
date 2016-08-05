@@ -44,7 +44,8 @@ Route::get('begin', function () {
     Session::put('foo', 'bar');
 
     Session::flash('status', 'Hello There!');
-    session()->flash('status', 'Here is my status.');
+    session()->flash('flash_message', 'You\'re logged in now.');
+    session()->flash('flash_message_level', 'success');
 
 //     return redirect('/');
     return Redirect::to('/');
