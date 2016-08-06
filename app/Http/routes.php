@@ -70,9 +70,14 @@ $two = app('foo');
 
 Route::get('/', function (RegistersUsers $registration) {
 
-//     $people = ['Taylor','Matt','Jeffrey'];
-// 
-//     return view('welcome')->withPeople($people);
+    $people = ['Taylor','Matt','Jeffrey'];
+
+    return view('welcome')->withPeople($people);
+
+});
+
+Route::get('/RegistersUsers', function (RegistersUsers $registration) {
+
       var_dump($registration);
 
 });
