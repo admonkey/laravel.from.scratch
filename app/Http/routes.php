@@ -82,6 +82,8 @@ Route::get('/RegistersUsers', function (RegistersUsers $registration) {
 
 });
 
+Route::get('/posts', 'PostsController@index');
+
 Route::get('begin', function () {
 
     flash('You\'re barred.','danger');
