@@ -22,8 +22,11 @@ class RegistersUsers {
         }
 }
 
-$registration = new RegistersUsers(new Mailer);
-var_dump($registration);
+App::bind('foo',function(){
+  return new RegistersUsers(new Mailer);
+});
+
+var_dump(App::make('foo'));
 
 /*
 |--------------------------------------------------------------------------
