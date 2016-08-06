@@ -22,12 +22,23 @@ class RegistersUsers {
         }
 }
 
-App::bind('foo',function(){
+// bind for multiple factories
+// App::bind('foo',function(){
+//   return new RegistersUsers(new Mailer);
+// });
+
+// use singleton instead
+App::singleton('foo',function(){
   return new RegistersUsers(new Mailer);
 });
 
+$one = app('foo');
+$two = app('foo');
+
 // var_dump(App::make('foo'));
-var_dump(app('foo'));
+// var_dump(app('foo'));
+
+var_dump($one,$two);
 
 /*
 |--------------------------------------------------------------------------
