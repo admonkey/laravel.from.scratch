@@ -1,5 +1,30 @@
 <?php
 
+class Mailer {
+
+        /**
+         * Class constructor
+         *
+         * @return void
+         */
+        public function __construct()
+        {
+                
+        }
+}
+
+class RegistersUsers {
+
+        protected $mailer;
+        public function __construct(Mailer $mailer)
+        {
+                $this->mailer = $mailer;
+        }
+}
+
+$registration = new RegistersUsers(new Mailer);
+var_dump($registration);
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
