@@ -26,7 +26,8 @@ App::bind('foo',function(){
   return new RegistersUsers(new Mailer);
 });
 
-var_dump(App::make('foo'));
+// var_dump(App::make('foo'));
+var_dump(app('foo'));
 
 /*
 |--------------------------------------------------------------------------
