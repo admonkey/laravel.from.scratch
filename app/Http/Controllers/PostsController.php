@@ -17,6 +17,7 @@ class PostsController extends Controller
 
     public function index()
     {
-            return $this->request->all();
+//             return $this->request->all();
+              return request()->all();
     }
 }
