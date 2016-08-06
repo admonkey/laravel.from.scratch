@@ -38,7 +38,7 @@ $two = app('foo');
 // var_dump(App::make('foo'));
 // var_dump(app('foo'));
 
-var_dump($one,$two);
+// var_dump($one,$two);
 
 /*
 |--------------------------------------------------------------------------
@@ -68,11 +68,12 @@ var_dump($one,$two);
 
 // Route::get('/', 'PagesController@home');
 
-Route::get('/', function () {
+Route::get('/', function (RegistersUsers $registration) {
 
-    $people = ['Taylor','Matt','Jeffrey'];
-
-    return view('welcome')->withPeople($people);
+//     $people = ['Taylor','Matt','Jeffrey'];
+// 
+//     return view('welcome')->withPeople($people);
+      var_dump($registration);
 
 });
 
