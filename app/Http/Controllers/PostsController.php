@@ -8,9 +8,15 @@ use App\Http\Requests;
 
 class PostsController extends Controller
 {
+    protected $request;
 
-    public function index(Request $request)
+    public function __construct(Request $request)
     {
-            return $request->all();
+            $this->request = $request;
+    }
+
+    public function index()
+    {
+            return $this->request->all();
     }
 }
